@@ -1,8 +1,17 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/compiler.xml
+/encodings.xml
+/jarRepositories.xml
+/misc.xml
+/modules.xml
+/Shiro.iml
+/uiDesigner.xml
+/vcs.xml
 # Datasource local storage ignored files
 /../../../../../../:\Project\Java\Idea-2021\Shiro\.idea/dataSources/
+/../../../../../../:\Project\Java\Idea-2021\Shiro\.idea/libraries/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
