@@ -19,10 +19,17 @@ import java.util.Arrays;
  */
 public class CustomerMd5Realm extends AuthorizingRealm {
 
-    // 授权
+    /**
+     * 授权操作
+     * @param principalCollection
+     * @return
+     */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+
+        // 说明:角色和操作权限是需要从数据库中取到，此处临时值使用
+
         // 设置角色
         //simpleAuthorizationInfo.addRole();
         simpleAuthorizationInfo.addRoles(Arrays.asList("admin", "player"));
@@ -35,7 +42,12 @@ public class CustomerMd5Realm extends AuthorizingRealm {
         return simpleAuthorizationInfo;
     }
 
-    // 认证
+    /**
+     * 认证操作
+     * @param authenticationToken
+     * @return
+     * @throws AuthenticationException
+     */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String principal = (String) authenticationToken.getPrincipal();

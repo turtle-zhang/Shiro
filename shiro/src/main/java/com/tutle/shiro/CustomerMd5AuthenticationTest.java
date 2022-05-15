@@ -22,12 +22,14 @@ public class CustomerMd5AuthenticationTest {
         //2.注入realm
         CustomerMd5Realm realm = new CustomerMd5Realm();
 
-        //3.设置realm使用hash凭证匹配器
+        //3.创建使用hash凭证匹配器
         HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
         //声明：使用的算法
         credentialsMatcher.setHashAlgorithmName("md5");
         //声明：散列次数
         credentialsMatcher.setHashIterations(1024);
+
+        // 将密码器设置到realm中
         realm.setCredentialsMatcher(credentialsMatcher);
         // 盐值的设置在认证里面已经进行了全局的设置
 

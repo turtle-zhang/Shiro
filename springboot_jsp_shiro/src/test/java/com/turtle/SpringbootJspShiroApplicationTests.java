@@ -1,4 +1,4 @@
-package com.turtle.springboot_jsp_shiro;
+package com.turtle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
